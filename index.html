@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#182637">
+    <meta name="description" content="КАДР — минималистичный список задач. Добавляйте, выполняйте и удаляйте дела: список сохраняется в браузере.">
+    <title>КАДР — список задач</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">КАДР</a>
+        <span class="site-header__caption">Список задач</span>
+      </header>
+
+      <main class="board">
+        <section class="board-intro" aria-labelledby="page-title">
+          <p class="board-intro__eyebrow">СПИСОК ЗАДАЧ</p>
+          <div class="board-intro__content">
+            <h1 class="board-intro__title" id="page-title">ДЕЛА<br>В <span>ФОКУСЕ</span></h1>
+            <p class="board-intro__description">Запиши задачу, отметь выполненное и возвращайся к списку в любое время.</p>
+          </div>
+          <p class="board-intro__note">Задачи сохраняются на этом устройстве.</p>
+        </section>
+
+        <section class="workspace" aria-label="Список задач">
+          <form class="task-form" id="task-form">
+            <label class="task-form__label" for="task-input">НОВАЯ ЗАДАЧА</label>
+            <div class="task-form__fields">
+              <input
+                class="task-form__input"
+                id="task-input"
+                name="task"
+                type="text"
+                placeholder="Что предстоит сделать?"
+                maxlength="200"
+                autocomplete="off"
+                required
+              >
+              <button class="task-form__submit" type="submit">Добавить задачу</button>
+            </div>
+          </form>
+
+          <section class="tasks" aria-labelledby="tasks-title">
+            <div class="tasks__heading">
+              <h2 class="tasks__title" id="tasks-title">Мои задачи</h2>
+            </div>
+            <p class="tasks__empty" id="empty-message">Пока задач нет. Начни с одной — и двигайся дальше.</p>
+            <ul class="tasks__list" id="task-list"></ul>
+          </section>
+          <p class="workspace__notice" id="storage-message" role="status" hidden></p>
+
+        </section>
+      </main>
+
+
+    </div>
+  </body>
+</html>
